@@ -6,7 +6,7 @@ class CategoryList extends Component {
     return (
       <div>
         <h3>Categories</h3>
-        <h5>Seçili Category : {this.props.currentCategory.categoryName}</h5>
+        <h5>Seçili Category : {this.props.currentCategory}</h5>
       </div>
     );
   }
@@ -14,7 +14,7 @@ class CategoryList extends Component {
 
 function mapStateToProps(state) {
   return {
-    currentCategory:state.changeCategoryReducer
-  }
+    currentCategory: state.changeCategroyReducer
+  };
 }
 export default connect(mapStateToProps)(CategoryList);
