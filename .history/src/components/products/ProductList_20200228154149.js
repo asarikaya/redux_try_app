@@ -4,7 +4,6 @@ import { Badge, Table, Button } from "reactstrap";
 import { bindActionCreators } from "redux";
 import * as productActions from "../../redux/actions/productActions";
 import * as cartActions from "../../redux/actions/cartActions"
-import alertify from "alertifyjs"
 
 class ProductList extends Component {
   // ilk açılışta yapılacaklar
@@ -13,8 +12,7 @@ class ProductList extends Component {
   }
 
   addToCart=(product)=>{
-    this.props.actions.addToCart({quantity:1,product});
-    alertify.success(product.productName+" sepete eklendi")
+    this.props.actiond.addToCart({quantity:1,product});
   }
 
   render() {
