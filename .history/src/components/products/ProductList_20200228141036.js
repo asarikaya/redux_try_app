@@ -6,7 +6,7 @@ import * as productActions from "../../redux/actions/productActions";
 
 class ProductList extends Component {
   componentDidMount() {
-    this.props.actions.getProducts();
+    this.props.actions.getProducts(this.props.currentCategory.id);
   }
 
   render() {

@@ -23,8 +23,8 @@ class ProductList extends Component {
             <tr>
               <th>#</th>
               <th>Product Name</th>
+              <th>Quantity Per Unit</th>
               <th>Unit Price</th>
-              <th>Quantity Per Unit</th>              
               <th>Units In Stock</th>
             </tr>
           </thead>
@@ -32,9 +32,9 @@ class ProductList extends Component {
             {this.props.products.map(product => (
               <tr key={product.id}>
                 <th scope="row">{product.id}</th>
-                <td>{product.productName}</td>                
-                <td>{product.unitPrice}</td>
+                <td>{product.productName}</td>
                 <td>{product.quantityPerUnit}</td>
+                <td>{product.unitPrice}</td>
                 <td>{product.unitsInStock}</td>
               </tr>
             ))}

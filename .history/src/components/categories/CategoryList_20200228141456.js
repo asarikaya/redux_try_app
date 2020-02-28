@@ -12,7 +12,7 @@ class CategoryList extends Component {
 
   selectCategory = category => {
     this.props.actions.changeCategory(category);
-    this.props.actions.getProducts(category.id);
+    this.props.actions.getProducts(category);
   };
 
   render() {
