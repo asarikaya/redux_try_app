@@ -9,6 +9,7 @@ export function getCategoriesSuccess(categories){
 }
 
 export function getCategories() {
+    debugger;
   return function(dispatch) {
     let url = "http://localhost:3000/categories";
     return fetch(url)

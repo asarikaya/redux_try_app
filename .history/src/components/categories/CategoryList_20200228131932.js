@@ -9,16 +9,14 @@ class CategoryList extends Component {
     this.props.actions.getCategories();
   }
 
-  selectCategory = category => {
+  selectCategory = (category) => {
     this.props.actions.changeCategory(category);
   };
 
   render() {
     return (
       <div>
-        <h3>
-          <Badge color="warning">Categories</Badge>
-        </h3>
+        <h3><Badge color="warning">Categories</Badge></h3>
         <ListGroup>
           {this.props.categories.map(category => (
             <ListGroupItem

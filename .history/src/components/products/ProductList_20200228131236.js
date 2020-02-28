@@ -7,10 +7,7 @@ class ProductList extends Component {
     return (
       <div>
         <h3>
-          <Badge color="warning">Products</Badge>
-          <Badge color="success">
-            {this.props.currentCategory.categoryName}
-          </Badge>
+            Products <Badge color="success">{this.props.currentCategory.categoryName}</Badge>
         </h3>
       </div>
     );
