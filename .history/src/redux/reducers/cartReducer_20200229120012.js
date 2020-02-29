@@ -22,7 +22,7 @@ export default function cartReducer(state=initialState.cart,action){
             }
 
         case actionTypes.REMOVE_FROM_CART:
-            // carta eklenen elemanlardan, elemanın product kısmındaki id değeri(çünkü carttaki her elemanda 1 product 1 quantity değeri mevcut) action la gelen payload ın id sine (çünkü actionda quantity yok direk product geliyor) eşit olmayanları filtreliyorum. Yani silinecek veriyi değil silinmeyecek verileri bir araya topluyorum silinecek veri dışarda kalıyor
+            // carta eklenen elemanlardan, elemanın product kısmındaki id değeri(çünkü carttaki her elemanda 1 product 1 quantity değeri mevcut) action la gelen payload ın id sine (çünkü actionda quantity yok direk product geliyor) eşit olmayanları filtreliyorum
             const newState2 = state.filter(cartItem=>cartItem.product.id!==action.payload.id);
             // newState değişkenini bir önceki casede tanımladığım için burada ismini değiştirdim
             return newState2;

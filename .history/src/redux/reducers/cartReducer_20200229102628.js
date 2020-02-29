@@ -20,12 +20,6 @@ export default function cartReducer(state=initialState.cart,action){
                 // statenin bir kopyasını al ve o kopyaya action ile gelen payload'ı ekle
                 return [...state,{...action.payload}]
             }
-
-        case actionTypes.REMOVE_FROM_CART:
-            // carta eklenen elemanlardan, elemanın product kısmındaki id değeri(çünkü carttaki her elemanda 1 product 1 quantity değeri mevcut) action la gelen payload ın id sine (çünkü actionda quantity yok direk product geliyor) eşit olmayanları filtreliyorum. Yani silinecek veriyi değil silinmeyecek verileri bir araya topluyorum silinecek veri dışarda kalıyor
-            const newState2 = state.filter(cartItem=>cartItem.product.id!==action.payload.id);
-            // newState değişkenini bir önceki casede tanımladığım için burada ismini değiştirdim
-            return newState2;
     
         default:
             return state;
