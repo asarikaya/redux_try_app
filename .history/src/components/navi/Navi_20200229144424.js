@@ -21,13 +21,10 @@ export default class Navi extends Component {
           <Collapse navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/categories">Categories</NavLink>
+                <NavLink href="/components/">Components</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/products">Products</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/asarikaya/redux_try_app" target="_blank">
+                <NavLink href="https://github.com/reactstrap/reactstrap">
                   GitHub
                 </NavLink>
               </NavItem>

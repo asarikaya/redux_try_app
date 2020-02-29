@@ -12,7 +12,7 @@ function App() {
       <Navi/>
       <Switch>
         <Route exact path="/" component={Dashboard}/>
-        <Route exact path="/products" component={Dashboard}/>
+        <Route exact path="/product" component={Dashboard}/>
         <Route path="/cart" component={CartDetail}/>
         <Route component={NotFound}/>
       </Switch>

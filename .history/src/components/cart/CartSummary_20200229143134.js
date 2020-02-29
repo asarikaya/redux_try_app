@@ -17,7 +17,7 @@ import {
 class CartSummary extends Component {
   removeFromCart(product) {
     this.props.actions.removeFromCart(product);
-    alertify.error(product.productName + " removed from cart", 2);
+    alertify.warning(product.productName + " sepetten silindi", 2);
   }
 
   renderEmpty() {
@@ -49,7 +49,7 @@ class CartSummary extends Component {
           ))}
 
           <DropdownItem divider />
-          <DropdownItem><Link to="/cart">Go To Cart</Link></DropdownItem>
+          <DropdownItem><NavLink to="/cart">Go To Cart</NavLink></DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
     );

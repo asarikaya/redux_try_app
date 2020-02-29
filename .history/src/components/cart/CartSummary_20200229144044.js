@@ -17,7 +17,7 @@ import {
 class CartSummary extends Component {
   removeFromCart(product) {
     this.props.actions.removeFromCart(product);
-    alertify.error(product.productName + " removed from cart", 2);
+    alertify.error(product.productName + " sepetten silindi", 2);
   }
 
   renderEmpty() {

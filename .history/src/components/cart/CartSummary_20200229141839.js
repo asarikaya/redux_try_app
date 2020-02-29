@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import * as cartActions from "../../redux/actions/cartActions";
 import alertify from "alertifyjs";
 import { bindActionCreators } from "redux";
-import {Link} from "react-router-dom"
 import {
   UncontrolledDropdown,
   DropdownToggle,
@@ -17,7 +16,7 @@ import {
 class CartSummary extends Component {
   removeFromCart(product) {
     this.props.actions.removeFromCart(product);
-    alertify.error(product.productName + " removed from cart", 2);
+    alertify.warning(product.productName + " sepetten silindi", 2);
   }
 
   renderEmpty() {
