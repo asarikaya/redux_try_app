@@ -25,42 +25,12 @@ export function getProducts(categoryId) {
 }
 
 // yukarıda tanımladığım create ve update actionları için ortak bir save fonksiyonu yazıyorum
-export function saveProductApi(product) {
+export function saveProduct(product) {
   // ekleme veya düzenleme için veri tabanımıza product id yi gönderiyoruz yada boş gönderiyorum neye göre olduğunu method ta belirtiyorum
   return fetch("http://localhost/3000/products/" + (product.id || ""), {
     // eğer product id varsa bir düzenlemedir ve PUT ile gönderiyorum eğer product id yoksa bir eklemedir ve POST ile gönderiyoruz
     method: product.id ? "PUT" : "POST",
     // eklemek yada düzenlemek için göndereceğimiz datayı body ile "stringleştirerek" gönderiyoruz çünkü request ler string olarak gönderilir
     body: JSON.stringify(product)
-  })
-    .then(handleResponse)
-    .catch(handleError);
-}
-
-export function saveProduct(product) {
-  return function(dispatch) {
-    return saveProductApi(product)
-      .then(savedProduct => {
-        product.id
-          ? dispatch(updateProductSuccess(savedProduct))
-          : dispatch(createProductSuccess(savedProduct));
-      })
-      .catch(error => {
-        throw error;
-      });
-  };
-}
-
-export async function handleResponse(response) {
-  if (response.ok) {
-    return response.json();
-  }
-
-  const error = await response.text();
-  throw new Error(error);
-}
-
-export function handleError(error) {
-  console.error("Bir hata oluştu");
-  throw error;
+  });
 }

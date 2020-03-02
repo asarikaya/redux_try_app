@@ -37,30 +37,10 @@ export function saveProductApi(product) {
     .catch(handleError);
 }
 
-export function saveProduct(product) {
+export function saveProduct(product){
   return function(dispatch) {
-    return saveProductApi(product)
-      .then(savedProduct => {
-        product.id
-          ? dispatch(updateProductSuccess(savedProduct))
-          : dispatch(createProductSuccess(savedProduct));
-      })
-      .catch(error => {
-        throw error;
-      });
-  };
-}
-
-export async function handleResponse(response) {
-  if (response.ok) {
-    return response.json();
+    return saveProductApi(product).then(savedProduct=>{
+      product.id?dispatch(updateProductSuccess(savedProduct)):dispatch(createProductSuccess(savedProduct))
+    })
   }
-
-  const error = await response.text();
-  throw new Error(error);
-}
-
-export function handleError(error) {
-  console.error("Bir hata oluştu");
-  throw error;
 }
