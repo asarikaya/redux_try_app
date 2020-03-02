@@ -12,10 +12,10 @@ function App() {
     <Container>
       <Navi/>
       <Switch>
-        <Route exact path="/" component={Dashboard}/>
-        <Route exact path="/products" component={Dashboard}/>
-        <Route exact path="/cart" component={CartDetail}/>
-        <Route path="/saveproduct/:productId" component={AddOrUpdateProduct}/>
+        <Route path="/" exact component={Dashboard}/>
+        <Route path="/products" exact component={Dashboard}/>
+        <Route path="/cart" exact component={CartDetail}/>
+        <Route path="/saveproduct" exact component={AddOrUpdateProduct}/>
         <Route component={NotFound}/>
       </Switch>
     </Container>
