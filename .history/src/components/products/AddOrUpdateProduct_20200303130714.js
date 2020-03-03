@@ -8,7 +8,7 @@ function AddOrUpdateProduct({
   products,
   categories,
   getProducts,
-  getCategories,
+  getCategories(),
   saveProduct,
   history,
   ...props

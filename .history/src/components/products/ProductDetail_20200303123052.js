@@ -17,7 +17,7 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
       <SelectInput
         name="categoryId"
         label="Category"
-        value={product.categoryId || ""}
+        value={product.categoryID || ""}
         defaultOption="Seçiniz"
         options={categories.map(category => ({
           value: category.id,

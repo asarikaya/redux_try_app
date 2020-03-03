@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import * as getCategories from "../../redux/actions/categoryActions";
-import * as saveProduct from "../../redux/actions/productActions";
-import ProductDetail from "./ProductDetail";
+import React, { useEffect, useState } from "react"
+import { connect } from "react-redux"
+import * as getCategories from "../../redux/actions/categoryActions"
+import * as saveProduct from "../../redux/actions/productActions"
+import ProductDetail from "./ProductDetail"
 
 function AddOrUpdateProduct({
   products,
@@ -16,7 +16,7 @@ function AddOrUpdateProduct({
   const [product, setProduct] = useState({ ...props.product });
   useEffect(() => {
     if (categories.length === 0) {
-      getCategories();
+      getCategories()
     }
     setProduct({ ...props.product });
   }, [props.product]);

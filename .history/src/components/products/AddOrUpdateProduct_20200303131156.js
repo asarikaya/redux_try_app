@@ -19,7 +19,7 @@ function AddOrUpdateProduct({
       getCategories();
     }
     setProduct({ ...props.product });
-  }, [props.product]);
+  }, [...props.product]);
 
   function handleChange(event) {
     const { name, value } = event.target;

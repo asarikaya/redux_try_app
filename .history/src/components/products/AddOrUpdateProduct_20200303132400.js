@@ -64,9 +64,14 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-const mapDispatchToProps = {
+function mapDispatchToProps(dispatch) {
   getCategories,
   saveProduct
-};
+}
+
+// const mapDispatchToProps = {
+//   getCategories,
+//   saveProduct
+// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddOrUpdateProduct);

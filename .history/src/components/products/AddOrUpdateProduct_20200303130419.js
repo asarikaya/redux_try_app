@@ -16,7 +16,7 @@ function AddOrUpdateProduct({
   const [product, setProduct] = useState({ ...props.product });
   useEffect(() => {
     if (categories.length === 0) {
-      getCategories();
+      //getCategories();
     }
     setProduct({ ...props.product });
   }, [props.product]);

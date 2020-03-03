@@ -10,7 +10,6 @@ import {
   NavbarText
 } from "reactstrap";
 import CartSummary from "../cart/CartSummary";
-import { Link } from "react-router-dom";
 
 export default class Navi extends Component {
   render() {
@@ -25,7 +24,7 @@ export default class Navi extends Component {
                 <NavLink href="/categories">Categories</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink><Link to="/saveproduct">Add Product</Link></NavLink>
+                <NavLink href="/saveproduct">Add Product</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/asarikaya/redux_try_app" target="_blank">
